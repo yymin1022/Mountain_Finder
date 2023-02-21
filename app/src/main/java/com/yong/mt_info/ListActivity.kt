@@ -9,7 +9,6 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.yong.mt_info.ui.theme.MountainTheme
 
 class ListActivity : ComponentActivity() {
@@ -32,12 +31,4 @@ class ListActivity : ComponentActivity() {
 @Composable
 fun Greeting2(name: String) {
     Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview2() {
-    MountainTheme {
-        Greeting2("List Activity")
-    }
 }
