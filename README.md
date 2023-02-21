@@ -2,6 +2,8 @@
 
 ## Conventions
 
+- 모든 작업내용은 Issue로 작성한 뒤, Branch를 분리해 작업하고, PR을 통해 Code-Review 이후 Master Branch에 Merge 합니다.
+
 ### Commit Rule
 ```
 __Action__ __FileName__ : __Description__
@@ -23,6 +25,18 @@ Update MainActivity : Added Login Button on Base Component
 ```
 Update Project : Set Gradle Version to 7.3.1
 ```
+
+### Branch Rule
+```
+TYPE/BRANCH_NAME
+```
+- 기본적으로 Branch의 이름은 Issue의 이름을 따릅니다.
+- TYPE은 다음 중 하나를 해당하는 Issue의 Type과 동일하게 선택합니다.
+  - dev : 일반적인 개발 사항
+  - fix : 기존에 개발된 내용을 수정하는 사항
+  - doc : README 등 문서에 관련된 사항
+- BRANCH_NAME은 해당하는 Issue의 Title을 적절히 변형합니다.
+
 
 ### Issue / PR Rule
 
