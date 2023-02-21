@@ -20,7 +20,7 @@ class DetailActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    DetailUI("Detail Activity")
+                    DetailUI()
                 }
             }
         }
@@ -28,7 +28,7 @@ class DetailActivity : ComponentActivity() {
 }
 
 @Composable
-fun DetailUI(name: String) {
+fun DetailUI() {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -39,7 +39,7 @@ fun DetailUI(name: String) {
         Column(
             modifier = Modifier.padding(it)
         ) {
-            Text(text = "Hello $name!")
+            Text(text = "Wa! Sans!")
         }
     }
 }
