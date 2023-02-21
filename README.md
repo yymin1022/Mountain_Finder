@@ -4,6 +4,8 @@
 
 - 모든 작업내용은 Issue로 작성한 뒤, Branch를 분리해 작업하고, PR을 통해 Code-Review 이후 Master Branch에 Merge 합니다.
 
+---
+
 ### Commit Rule
 ```
 __Action__ __FileName__ : __Description__
@@ -15,7 +17,7 @@ __Action__ __FileName__ : __Description__
   - Gradle, Gitignore과 같이 프로젝트 전역의 설정 파일을 수정한 경우에는 ```Update Project```와 같이 작성합니다.
 - Description 은 Commit에서 변경된 내용을 한 문장으로 요약합니다.
 
-> Commit Example
+#### Commit Example
 ```
 Added README.md
 ```
@@ -25,6 +27,8 @@ Update MainActivity : Added Login Button on Base Component
 ```
 Update Project : Set Gradle Version to 7.3.1
 ```
+
+---
 
 ### Branch Rule
 ```
@@ -37,6 +41,15 @@ TYPE/BRANCH_NAME
   - doc : README 등 문서에 관련된 사항
 - BRANCH_NAME은 해당하는 Issue의 Title을 적절히 변형합니다.
 
+#### Branch Example
+```
+dev/base-activity
+```
+```
+docs/readme-base
+```
+
+---
 
 ### Issue / PR Rule
 
@@ -61,4 +74,5 @@ Detail Description of Issue or PR
 - FIX Issue 혹은 UI에 관련된 PR의 경우는, Description에 스크린샷을 첨부해주시기 바랍니다.
 
 [Issue Example](https://github.com/yymin1022/Mountain_Finder/issues/1)
+
 [PR Example](https://github.com/yymin1022/Mountain_Finder/pull/3)
