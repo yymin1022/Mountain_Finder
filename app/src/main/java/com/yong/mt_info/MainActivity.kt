@@ -3,13 +3,12 @@ package com.yong.mt_info
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.yong.mt_info.ui.theme.MountainTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,7 +16,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MountainTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
@@ -31,5 +29,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainUI(name: String) {
-    Text(text = "Hello $name!")
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Mountain Finder") }
+            )
+        }
+    ) {
+        Column(
+            modifier = Modifier.padding(it)
+        ) {
+            Text(text = "Hello $name!")
+        }
+    }
 }
