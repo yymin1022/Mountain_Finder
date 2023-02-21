@@ -1,5 +1,6 @@
 package com.yong.mt_info
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,7 +21,7 @@ class ListActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    ListUI("List Activity")
+                    ListUI(this)
                 }
             }
         }
@@ -28,7 +29,7 @@ class ListActivity : ComponentActivity() {
 }
 
 @Composable
-fun ListUI(name: String) {
+fun ListUI(ctx: Context) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -39,7 +40,16 @@ fun ListUI(name: String) {
         Column(
             modifier = Modifier.padding(it)
         ) {
-            Text(text = "Hello $name!")
+            Button(
+                modifier = Modifier.fillMaxWidth()
+                    .height(60.dp)
+                    .padding(10.dp),
+                onClick = {
+                    ctx.startActivity(Intent(ctx, DetailActivity::class.java))
+                }
+            ) {
+                Text("Go to Detail Activity")
+            }
         }
     }
 }
