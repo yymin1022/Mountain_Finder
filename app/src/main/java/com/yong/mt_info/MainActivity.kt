@@ -1,14 +1,15 @@
 package com.yong.mt_info
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.yong.mt_info.ui.theme.MountainTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    MainUI("Android")
+                    MainUI(this)
                 }
             }
         }
@@ -28,7 +29,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainUI(name: String) {
+fun MainUI(ctx: Context) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -39,7 +40,16 @@ fun MainUI(name: String) {
         Column(
             modifier = Modifier.padding(it)
         ) {
-            Text(text = "Hello $name!")
+            Button(
+                modifier = Modifier.fillMaxWidth()
+                    .height(60.dp)
+                    .padding(10.dp),
+                onClick = {
+                    ctx.startActivity(Intent(ctx, ListActivity::class.java))
+                }
+            ) {
+                Text("Go to List Activity")
+            }
         }
     }
 }
