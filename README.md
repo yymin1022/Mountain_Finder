@@ -45,3 +45,6 @@ Detail Description of Issue or PR
 ```
 - Description 항목이 불필요한 경우에는 생략할 수 있습니다.
 - FIX Issue 혹은 UI에 관련된 PR의 경우는, Description에 스크린샷을 첨부해주시기 바랍니다.
+
+[Issue Example](https://github.com/yymin1022/Mountain_Finder/issues/1)
+[PR Example](https://github.com/yymin1022/Mountain_Finder/pull/3)
