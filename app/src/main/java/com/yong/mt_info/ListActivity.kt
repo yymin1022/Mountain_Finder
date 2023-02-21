@@ -16,12 +16,11 @@ class ListActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MountainTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting2("List Activity")
+                    ListUI("List Activity")
                 }
             }
         }
@@ -29,6 +28,6 @@ class ListActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting2(name: String) {
+fun ListUI(name: String) {
     Text(text = "Hello $name!")
 }
