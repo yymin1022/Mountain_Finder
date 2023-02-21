@@ -20,7 +20,7 @@ class DetailActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting3("Detail Activity")
+                    DetailUI("Detail Activity")
                 }
             }
         }
@@ -28,6 +28,6 @@ class DetailActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting3(name: String) {
+fun DetailUI(name: String) {
     Text(text = "Hello $name!")
 }
