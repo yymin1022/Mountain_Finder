@@ -1,6 +1,5 @@
 package com.yong.mt_info
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.yong.mt_info.ui.theme.MountainTheme
 
-class MainActivity : ComponentActivity() {
+class DetailActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -21,7 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    MainUI(this)
+                    DetailUI()
                 }
             }
         }
@@ -29,7 +28,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainUI(ctx: Context) {
+fun DetailUI() {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -40,16 +39,7 @@ fun MainUI(ctx: Context) {
         Column(
             modifier = Modifier.padding(it)
         ) {
-            Button(
-                modifier = Modifier.fillMaxWidth()
-                    .height(60.dp)
-                    .padding(10.dp),
-                onClick = {
-                    ctx.startActivity(Intent(ctx, ListActivity::class.java))
-                }
-            ) {
-                Text("Go to List Activity")
-            }
+            Text(text = "Wa! Sans!")
         }
     }
 }
