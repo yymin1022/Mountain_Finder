@@ -1,5 +1,21 @@
 ## Mountain Finder
 
+## API Usage
+[API 사용 가이드](https://data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000002657027&fileDetailSn=1)
+
+```local.properties``` Gradle 속성 파일 내에 API_KEY 변수와 BASE_URL 변수를 추가합니다.
+
+|변수| 설명                                |
+|---|-----------------------------------|
+|API_KEY| 공공데이터포털에서 발급받은 API Key 값          |
+|BASE_URL| API Key를 이용해 서버에 접근하기 위한 Base URL |
+
+- Kotlin 상에서 Gradle 속성에 정의된 변수로의 접근은 다음과 같습니다.
+```kotlin
+val API_KEY = BuildConfig.API_KEY
+val BASE_URL = BuildConfig.BASE_URL
+```
+
 ## Conventions
 
 - 모든 작업내용은 Issue로 작성한 뒤, Branch를 분리해 작업하고, PR을 통해 Code-Review 이후 Master Branch에 Merge 합니다.
