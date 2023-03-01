@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.BoxScopeInstance.matchParentSize
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -39,5 +40,12 @@ fun DetailUI() {
         ) {
             Text(text = "Wa! Sans!")
         }
+    }
+}
+
+@Composable
+fun DetailImageView() {
+    Box() {
+        Text(text = "This is Image")
     }
 }
