@@ -37,7 +37,9 @@ fun DetailUI() {
         Column(
             modifier = Modifier.padding(it)
         ) {
-            Text(text = "Wa! Sans!")
+            DetailImageView()
+            DetailBasicTextView()
+            DetailInfoTextView()
         }
     }
 }
