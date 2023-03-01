@@ -55,6 +55,15 @@ fun DetailBasicTextView() {
 }
 
 @Composable
+fun DetailInfoTextView() {
+    Column(
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Text("This is Detail Info of Mountain")
+    }
+}
+
+@Composable
 fun DetailImageView() {
     Box(
         modifier = Modifier.fillMaxWidth()
