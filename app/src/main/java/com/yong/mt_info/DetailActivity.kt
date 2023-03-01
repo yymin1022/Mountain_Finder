@@ -3,10 +3,13 @@ package com.yong.mt_info
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.res.painterResource
 import com.yong.mt_info.ui.theme.MountainTheme
 
 class DetailActivity : ComponentActivity() {
@@ -70,6 +73,7 @@ fun DetailImageView() {
     Box(
         modifier = Modifier.fillMaxWidth()
     ) {
-        Text("This is Image")
+        Image(painter = painterResource(id = android.R.mipmap.sym_def_app_icon),
+            contentDescription = "Mountain Image")
     }
 }
